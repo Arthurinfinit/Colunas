@@ -1,0 +1,69 @@
+:root{
+    --Brightorange:hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan:hsl(179, 100%, 13%);
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Verylightgray: hsl(0, 0%, 95%);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+    background-color: var(--Transparentwhite);
+}
+
+.caixa{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    height: 90%;
+}
+
+.caixinha1 .caixinha2 .caixinha3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o conteúdo e o botão fiquem em posições separadas */
+    padding: 20px;
+}
+.caixinha1{
+    background-color: var(--Brightorange);
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.caixinha2{
+    background-color: var(--Darkcyan);
+    padding: 20px;
+}
+
+.caixinha3{
+    background-color: var(--Verydarkcyan);
+    padding: 20px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+p{
+    color: var(--Verylightgray);
+    font-family: "Lexend Deca", serif;
+    width: 400;
+}
+
+h1{
+    color: var(--Transparentwhite);
+    font-family: "Big Shoulders Display", serif;
+    width: 700;
+}
+
+button {
+    display: flex;
+    width: 80%;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 1000px;
+    border: 0px;
+    align-self: center; /* Centraliza o botão dentro da caixinha */
+}
