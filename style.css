@@ -1,122 +1,131 @@
 :root{
-    --Brightorange:hsl(31, 77%, 52%);
-    --Darkcyan: hsl(184, 100%, 22%);
-    --Verydarkcyan:hsl(179, 100%, 13%);
-    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
-    --Verylightgray: hsl(0, 0%, 95%);
+    --ciano-escuro: hsl(158, 36%, 37%);
+    --creme: hsl(30, 38%, 92%);
+    --verde-escuro:hsl(212, 21%, 14%);
+    --azul-acizentado:hsl(228, 12%, 48%);
+    --branco:#ffffff;
 }
 
 body{
     display: flex;
+    background-color: var(--creme);
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: var(--Transparentwhite);
-}
-
-img{
-    width: 30%;
+    margin: 0px;
 }
 
 .caixa{
-    display: flex;
+    width: auto;
+    height: auto;
+    min-height: 50%;
+    background-color: var(--branco);
+    border-radius: 10px;
+    display: grid;
     justify-content: space-between;
-    width: 80%;
-    height: 50%;
+    grid-template-columns: 50% 50%;
 }
 
-.caixinha1, .caixinha2, .caixinha3{
+.imagem{
+    background-image: url(./imagem1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Garante que o conteúdo e o botão fiquem em posições separadas */
-    padding: 50px;
-    height: 100%;
-    width: 30%;
+    justify-content:baseline;
+    border-radius: 10px 0 0 10px;
+}
+.perfume{
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%; 
 }
 
-.caixinha1{
-    background-color: var(--Brightorange);
-  
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.caixinha2{
-    background-color: var(--Darkcyan);
-
-}
-
-.caixinha3{
-    background-color: var(--Verydarkcyan);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-p{
-    font-size: 20px;
-    font-weight: 300;
-    color: var(--Verylightgray);
-    font-family: "Lexend Deca", serif;
-    margin-bottom: auto;
-}
-
-h1{
-    color: #ffffff;
-    font-family: "Big Shoulders Display", serif;
-    margin-bottom: 10px;
-    font-size: 40px;
-}
-
-button {
-    width: 50%;
-    padding: 15px;
+.perfume h2{
+    font-family: "Montserrat", serif;
     font-weight: 500;
-    background-color: #ffffff;
-    border-radius: 1000px;
-    border: none;
-    font-size: 16px;
+    font-size: 20px;
+    color: var(--azul-acizentado);
+    padding-top: 20px;
+}
+
+.perfume h1{
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0px;
+}
+
+.perfume p{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    color: var(--azul-acizentado);
+    font-size: 18px;
+}
+
+.preco{
+    display: flex;
+    align-items: center;
+    margin-top: auto; 
+    margin-bottom: 10px;
+}
+
+.preco h1, .preco p{
+    margin: 0;
+}
+
+.preco h1{
+    color: var(--ciano-escuro);
+}
+
+.preco p{
+    padding-left: 10px;
+    text-decoration: line-through;
+}
+
+.botao{
+    display: flex;
+    padding: 12px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border: none;
+    width: 100%;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ciano-escuro);
+    color: var(--branco);
+    margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #f4f4f4;
+.botao h6{
+    margin: 0px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: "montserrat" serif;
+    font-weight: 700;
 }
 
-.botao1{
-    color: var(--Brightorange)
-}
+@media (max-width: 900px) {
 
-.botao2 {
-    color: var(--Darkcyan);
-}
-
-.botao3{
-    color: var(--Verydarkcyan);
-}
-
-@media (max-width: 1100px) {
-    .caixa {
-        flex-direction: column; /* Coloca as caixas uma em cima da outra */
-        width: 80%; /* Ajusta a largura das caixas para caberem melhor */
-        height: 80%;
+    .caixa{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
     }
 
-    .caixinha1, .caixinha2, .caixinha3 {
-        width: 80%; /* Cada caixa ocupa 100% da largura da tela */
-        margin-bottom: 0px; /* Adiciona espaço entre as caixas */
+    .imagem{
+        background-image: url(./imagem2.jpg);
+        border-radius: 10px 10px 0 0;
+        height: 250px;
     }
 
-    button{
-        margin-top: 40px;
-    }
-
-    .caixinha1{
-        border-radius: 20px 20px 0 0;
-    }
-
-    .caixinha3{
-        border-radius: 0px 0px 20px 20px;
+    .perfume{
+        padding-left: 20px;
+        padding-right: 20
     }
 }
